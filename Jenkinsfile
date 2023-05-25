@@ -1,4 +1,4 @@
-podTemplate(label: 'mypod', serviceAccount: 'jenkins-tool', containers: [ 
+podTemplate(label: 'app.kubernetes.io/name:jenkins', serviceAccount: 'jenkins-1685014363-0', containers: [ 
     containerTemplate(
       name: 'docker', 
       image: 'docker', 
@@ -37,7 +37,7 @@ podTemplate(label: 'mypod', serviceAccount: 'jenkins-tool', containers: [
   ) {
     node('mypod') {
 
-        def REPOSITORY_URI = "vnagpal/demo-devops-helm"
+        def REPOSITORY_URI = "sumitrawal658/demo-devops-helm"
 
         stage('Get latest version of code') {
           checkout scm
