@@ -1,4 +1,4 @@
-podTemplate(label: 'app.kubernetes.io/name:jenkins', serviceAccount: 'jenkins-1685014363-0', containers: [ 
+podTemplate(label: 'jenkins', serviceAccount: 'jenkins-1685014363-0', containers: [ 
     containerTemplate(
       name: 'docker', 
       image: 'docker', 
